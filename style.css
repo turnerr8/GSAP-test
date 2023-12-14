@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* RESETS */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-size: 16px;
+	line-height: 1.3;
+	font-family: 'Bebas Neue', sans-serif;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	height: 100%;
+	width: fit-content;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.logo {
+	font-size: 8rem;
+	position: fixed;
+	top: 15%;
+	left: 4rem;
+	line-height: 0.9;
+	z-index: 15;
+}
+
+.line {
+	background-color: red;
+	height: 1rem;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+
+section {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+section.color::before {
+	content: '';
+	width: 2rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.block {
+	width: 50%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	transform: translateX(-100%);
+}
+
+.peach-fuzz::before,
+.peach-fuzz .block {
+	background-color: #febe98;
+}
+.viva-magenta::before,
+.viva-magenta .block {
+	background-color: #be3355;
+}
+.very-peri::before,
+.very-peri .block {
+	background-color: #6666ab;
+}
+.illuminating::before,
+.illuminating .block {
+	background-color: #f8e363;
+}
+
+.classic-blue::before,
+.classic-blue .block {
+	background-color: #35558a;
+}
+
+.living-coral::before,
+.living-coral .block {
+	background-color: #f36f63;
+}
+
+.caption {
+	position: absolute;
+	bottom: 4rem;
+	left: 4rem;
+	width: 30%;
+	font-weight: 400;
+	color: #444;
+	font-family: monospace;
+	transform: translate(100%, 100%);
+}
+
+.color img {
+	position: relative;
+	z-index: 10;
+	height: 60vh;
+	width: auto;
+	transform: translateY(-100%);
+}
+
+.huge-text {
+	font-size: 40rem;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	/* letter-spacing: 25px;
+	line-height: .75em; */
+	top: 5%;
+	left: 0;
+	transform: translateY(100%);
+	font-weight: 700;
+}
+
+.number {
+	position: absolute;
+	top: 4rem;
+	right: 4rem;
+	font-size: 3rem;
+	text-align: right;
+	transform: translateY(-200%);
+}
+
+.name {
+	position: absolute;
+	bottom: 4rem;
+	right: 4rem;
+	font-size: 4rem;
+	width: 30%;
+	text-align: right;
+	transform: translateY(200%);
+}
+
+.name::before,
+.name::after {
+	content: '';
+	color: #fff;
+}
